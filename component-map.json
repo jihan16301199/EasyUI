@@ -1,0 +1,27 @@
+{
+  "button": {
+    "tag": "button",
+    "styles": {
+      "display": "flex",
+      "align-items": "center",
+      "justify-content": "center",
+      "gap": "8px"
+    },
+    "children": [
+      {
+        "name": "icon",
+        "tag": "div",
+        "content": "<svg>.....</svg>",
+        "styles": {
+          "display": "flex"
+        }
+      },
+      {
+        "name": "text",
+        "tag": "span",
+        "content": "Button",
+        "styles": {}
+      }
+    ]
+  }
+}
