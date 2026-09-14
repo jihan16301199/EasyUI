@@ -48,7 +48,7 @@ async function generateComponent() {
 
     const mapPath = path.join(
         workspace.uri.fsPath,
-        'EasyUI',
+        'easy-ui',
         'component-map.json'
     );
 
@@ -233,6 +233,17 @@ function generateScss(
     );
 
     /*
+     * Responsive
+     *
+     * Example:
+     * @include media-down(md) {}
+     */
+    scss += generateResponsiveBlocks(
+        responsive,
+        2
+    );
+
+    /*
      * States
      *
      * Example:
@@ -242,17 +253,6 @@ function generateScss(
      */
     scss += generateStateBlocks(
         states,
-        2
-    );
-
-    /*
-     * Responsive
-     *
-     * Example:
-     * @include media-down(md) {}
-     */
-    scss += generateResponsiveBlocks(
-        responsive,
         2
     );
 
@@ -319,18 +319,18 @@ function generateChildScss(
     );
 
     /*
-     * Child states
-     */
-    scss += generateStateBlocks(
-        states,
-        4
-    );
-
-    /*
      * Child responsive styles
      */
     scss += generateResponsiveBlocks(
         responsive,
+        4
+    );
+
+    /*
+     * Child states
+     */
+    scss += generateStateBlocks(
+        states,
         4
     );
 
